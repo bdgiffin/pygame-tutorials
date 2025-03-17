@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './Example 10 - Packaging and distribution/knight_owl/build/'
+          path: './Example 10 - Packaging and distribution/knight_owl/build/web/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
