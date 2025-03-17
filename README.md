@@ -1,4 +1,4 @@
-# A simple introduction to PyGame
+# A simple introduction to pygame
 
 This repository contains step-by-step examples demonstrating how to create basic 2D games using [pygame](https://www.pygame.org/wiki/GettingStarted), including:
 
