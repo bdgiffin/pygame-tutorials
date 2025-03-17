@@ -28,6 +28,10 @@ async def main():
     enemy_image  = pygame.image.load('bat.png').convert_alpha()
     token_image  = pygame.image.load('firefly.png').convert_alpha()
 
+    # Set the window title and icon
+    pygame.display.set_caption('Knight Owl')
+    pygame.display.set_icon(player_image)
+
     player_rect = player_image.get_rect()
     enemy_rect  = enemy_image.get_rect()
     token_rect  = token_image.get_rect()
