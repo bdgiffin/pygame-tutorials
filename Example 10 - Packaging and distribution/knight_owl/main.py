@@ -91,7 +91,7 @@ async def main():
                 pygame.mixer.Sound.play(hoot_sound)
 
             if enemy_rect.collidepoint(player_rect.center):
-                player_health -= 100
+                player_health -= 20
                 enemy_rect.center = (window_width+32,random.randint(0,window_height))
                 pygame.mixer.Sound.play(squeak_sound)
 
