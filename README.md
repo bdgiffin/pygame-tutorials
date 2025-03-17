@@ -1,2 +1,1 @@
-# pygame-tutorials
-A collection of introductory examples to Pygame
+# A simple introduction to PyGame
