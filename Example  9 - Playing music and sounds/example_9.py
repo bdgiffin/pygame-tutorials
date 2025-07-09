@@ -74,11 +74,16 @@ while game_running:
         player_rect.y += max(0 - player_rect.midtop[1],0)
         player_rect.y -= max(player_rect.midbottom[1] - window_height,0)
 
-        if (player_rect.center[0] > enemy_rect.center[0]): enemy_rect.x += 2
-        if (player_rect.center[0] < enemy_rect.center[0]): enemy_rect.x -= 2
-        if (player_rect.center[1] > enemy_rect.center[1]): enemy_rect.y += 2
-        if (player_rect.center[1] < enemy_rect.center[1]): enemy_rect.y -= 2
-    
+        #if (player_rect.center[0] > enemy_rect.center[0]): enemy_rect.x += 1
+        #if (player_rect.center[0] < enemy_rect.center[0]): enemy_rect.x -= 1
+        #if (player_rect.center[1] > enemy_rect.center[1]): enemy_rect.y += 1
+        #if (player_rect.center[1] < enemy_rect.center[1]): enemy_rect.y -= 1
+        mouse_pos = pygame.mouse.get_pos()
+        if (mouse_pos[0] > enemy_rect.center[0]): enemy_rect.x += 5
+        if (mouse_pos[0] < enemy_rect.center[0]): enemy_rect.x -= 5
+        if (mouse_pos[1] > enemy_rect.center[1]): enemy_rect.y += 5
+        if (mouse_pos[1] < enemy_rect.center[1]): enemy_rect.y -= 5
+
         if player_rect.collidepoint(token_rect.center):
             player_score += 1
             token_rect.center = (random.randint(32,window_width-32),random.randint(32,window_height-32))

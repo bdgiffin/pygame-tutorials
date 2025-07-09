@@ -73,10 +73,10 @@ while game_running:
         player_rect.y += max(0 - player_rect.midtop[1],0)
         player_rect.y -= max(player_rect.midbottom[1] - window_height,0)
 
-        if (player_rect.center[0] > enemy_rect.center[0]): enemy_rect.x += 2
-        if (player_rect.center[0] < enemy_rect.center[0]): enemy_rect.x -= 2
-        if (player_rect.center[1] > enemy_rect.center[1]): enemy_rect.y += 2
-        if (player_rect.center[1] < enemy_rect.center[1]): enemy_rect.y -= 2
+        if (player_rect.center[0] > enemy_rect.center[0]): enemy_rect.x += 1
+        if (player_rect.center[0] < enemy_rect.center[0]): enemy_rect.x -= 1
+        if (player_rect.center[1] > enemy_rect.center[1]): enemy_rect.y += 1
+        if (player_rect.center[1] < enemy_rect.center[1]): enemy_rect.y -= 1
     
         if player_rect.collidepoint(token_rect.center):
             player_score += 1

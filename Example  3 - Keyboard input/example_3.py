@@ -36,6 +36,11 @@ while game_running:
         # Move the player up by 1 pixel:
         player_y -= 1
 
+    if (player_x < 0): player_x = 0
+    if (player_x > 400): player_x = 400
+    if (player_y < 0): player_y = 0
+    if (player_y > 300): player_y = 300
+        
     # "Erase" any shapes previously drawn in the window
     window.fill("Black") # reset window to display a full black screen
             
